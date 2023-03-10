@@ -43,24 +43,24 @@ public class PublicTester {
     public void testInsert() {
         MyBST.MyBSTNode<Integer, Integer> root = tree.root;
         tree.insert(10, 1);
-        assertEquals(root.getRight().getRight().getKey().intValue(), 10);
+        assertEquals(10, root.getRight().getRight().getKey().intValue());
         assertSame(root.getRight(), root.getRight().getRight().getParent());
         assertEquals("size of tree", 7, tree.size);
     }
 
     @Test
     public void testSearch() {
-        assertEquals(tree.search(3).intValue(), 30);
+        assertEquals(30, tree.search(3).intValue());
         assertNull(tree.search(10));
     }
 
     @Test
     public void testRemove() {
         MyBST.MyBSTNode<Integer, Integer> root = tree.root;
-        assertEquals(tree.remove(3).intValue(), 30);
+        assertEquals(30, tree.remove(3).intValue());
         assertNull(root.getLeft().getRight());
-        assertEquals(tree.remove(6).intValue(), 1);
-        assertEquals(root.getRight().getKey().intValue(), 5);
+        assertEquals(1, tree.remove(6).intValue());
+        assertEquals(5, root.getRight().getKey().intValue());
         assertEquals("size of tree", 4, tree.size);
     }
 
