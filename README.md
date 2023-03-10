@@ -25,6 +25,7 @@ There are 2 parts to this assignment. All are required before the deadline and s
     * Testing [10 Points]
     * Coding Style [5 Points]
 * Part 2: Sort Detective [10 Points]
+* Part 3: [Extra Credit] [Submit this survey](https://forms.gle/q3hkhinHXyRE4vSdA) [1 Point]
 
 ## Part 1: Testing and Implementation of Binary Search Tree [90 points]
 
@@ -308,6 +309,8 @@ Important: Even if your code does not pass all the tests, you will still be able
     * You will receive 2.5 points for each correctly identified sorting algorithm.
 * Coding Style [5 points]
   * `MyBST.java` will be graded on style. `CustomTester.java` will be graded on file, class, method headers and indentation.
+* Extra Credit [1 point]
+  * Submit this survey: https://forms.gle/q3hkhinHXyRE4vSdA 
 
 
 ## Appendix
