@@ -4,7 +4,7 @@ Due date: Thursday, March 16th @ 11:59 PM PT
 
 **There is no resubmission for this PA!**
 
-[There is an FAQ post on Piazza](TODO). Please read that post first if you have any questions.
+[There is an FAQ post on Piazza](https://piazza.com/class/lch5pcfyhil3n8/post/904). Please read that post first if you have any questions.
 
 
 #### Learning goals:
