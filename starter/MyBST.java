@@ -55,7 +55,7 @@ public class MyBST<K extends Comparable<K>, V> {
         /**
          * Return the key stored in the the MyBSTNode
          *
-         * @return the key stored in the MyBSTNode<
+         * @return the key stored in the MyBSTNode
          */
         public K getKey() {
             return key;
