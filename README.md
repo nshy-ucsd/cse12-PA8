@@ -224,14 +224,17 @@ Your task: create `CustomTester.java` and implement tests that can correctly dis
   * `inorder`
   * `search`
 
-#### How to compile and run the public tester:
-Running the public on UNIX based systems (including macOS): 
-* `$ javac -cp libs/junit-4.13.2.jar:libs/hamcrest-core-2.2.jar:. PublicTester.java`
-* `$ java -cp libs/junit-4.13.2.jar:libs/hamcrest-core-2.2.jar:. org.junit.runner.JUnitCore PublicTester`
+#### How to compile and run the testers:
+Running the tester on UNIX based systems (including a mac):
 
-on Windows systems:
-* `$ javac -cp ".;libs\junit-4.13.2.jar;libs\hamcrest-core-1.3.jar" PublicTester.java`
-* `$ java -cp ".;libs\junit-4.13.2.jar;libs\hamcrest-core-2.2.jar" org.junit.runner.JUnitCore PublicTester`
+* Compile: `javac -cp ../libs/junit-4.13.2.jar:../libs/hamcrest-2.2.jar:. PublicTester.java`
+* Execute: `java -cp ../libs/junit-4.13.2.jar:../libs/hamcrest-2.2.jar:. org.junit.runner.JUnitCore PublicTester`
+
+Running the tester on Windows systems:
+
+* Compile: `javac -cp ".;..\libs\junit-4.13.2.jar;..\libs\hamcrest-2.2.jar" PublicTester.java`
+* Execute: `java -cp ".;..\libs\junit-4.13.2.jar;..\libs\hamcrest-2.2.jar" org.junit.runner.JUnitCore PublicTester`
+
 
 ### Part 1D: Coding Style (5 points)
 
