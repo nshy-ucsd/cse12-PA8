@@ -277,8 +277,7 @@ You will submit the following file for this assignment:
 
 * `detective.json`
 
-As you know from class, if you double the size of the input data that you give to a quadratic algorithm, it will do four times the work; by contrast, an algorithm will do a bit more than twice as much; and, a linear algorithm will do only twice as much work. The properties of the input data set can affect the expected performance of many of our sorting algorithms. Before you begin, you should review the expected performance of the algorithms on various data sets. You may go through the first few questions in the concept quiz to help you review.
-
+As you know from class, if you double the size of the input data that you give to a quadratic algorithm, it will do four times the work; by contrast, an algorithm will do a bit more than twice as much; and, a linear algorithm will do only twice as much work. The properties of the input data set can affect the expected performance of many of our sorting algorithms. Before you begin, you should review the expected performance of the algorithms on various data sets.
 
 
 1. Execute `SortDetective.jar` (to execute the program type `java -jar SortDetective.jar` at the command line, or double click the jar file in a file explorer), enter your PID on the top right corner and play with it a bit. Each of you would get a different matching based on your PID, and we will grade based on your PID as well. Create a list with some size and property of your choice by clicking "Create The List".
