@@ -105,8 +105,13 @@ public class MyBST<K extends Comparable<K>, V> {
     }
 
     public ArrayList<MyBSTNode<K, V>> inorder() {
-        // TODO
-        return null;
+        ArrayList<MyBSTNode<K, V>> list = new ArrayList<>();
+        MyBSTNode<K,V> successor = root.successor();
+        while(successor != null)
+        {
+            list.add(successor);
+        }
+        return list;
     }
 
     static class MyBSTNode<K, V> {
@@ -222,15 +227,29 @@ public class MyBST<K extends Comparable<K>, V> {
             this.right = newRight;
         }
 
+        /**
+         * Find the smallest node that is larger than the current node
+         * @return the smallest node that is larger than the current node
+         */
         public MyBSTNode<K, V> successor() {
             MyBSTNode<K, V> ret = null;
             if(right != null)
-                ret = right;
-            while(ret.getLeft() != null)
             {
-                ret = left;
+                ret = getRight();
+                while(ret.getLeft() != null)
+                {
+                    ret = getLeft();
+                }
+                return ret;
             }
-            return ret;
+            MyBSTNode<K,V> current = this;
+            MyBSTNode<K,V> par = getParent();
+            while(par != null && current == par.getRight())
+            {
+                current = par;
+                par = par.getParent();
+            }
+            return par;
         }
 
         /**
