@@ -10,17 +10,97 @@ public class MyBST<K extends Comparable<K>, V> {
     }
 
     public V insert(K key, V value) {
-        // TODO
-        return null;
+        V replaced = null;
+        boolean cont = true;
+        MyBSTNode<K,V> temp = root;
+        while(cont)
+        {
+            if(key == null)
+                throw new NullPointerException();
+            if(temp == null)
+            {
+                temp = new MyBSTNode<K,V>(key, value, root);
+                size++;
+            }
+            else if(key.compareTo(temp.getKey()) == 0)
+            {
+                replaced = temp.getValue();
+                temp.setValue(value);
+            }
+            else if(key.compareTo(temp.getKey()) < 0)
+            {
+                temp = temp.left;
+            }
+            else if(key.compareTo(root.getKey()) > 0)
+            {
+                temp = temp.right;
+            }
+        }
+        return replaced;
     }
 
     public V search(K key) {
-        // TODO
+        if(key == null)
+            return null;
+        MyBSTNode<K,V> temp = root;
+        while(temp != null)
+        {
+            if(key.compareTo(temp.getKey()) == 0)
+            {
+                return temp.getValue();
+            }
+            else if(key.compareTo(temp.getKey()) < 0)
+            {
+                temp = temp.left;
+            }
+            else if(key.compareTo(root.getKey()) > 0)
+            {
+                temp = temp.right;
+            }
+        }
         return null;
     }
 
     public V remove(K key) {
-        // TODO
+        if(key == null)
+            return null;
+        MyBSTNode<K,V> temp = root;
+        while(temp != null)
+        {
+            if(key.compareTo(temp.getKey()) == 0)
+            {
+                V removed = temp.getValue();
+                if(temp.getLeft() == null && temp.getRight() == null)
+                {
+                    return removed;
+                }
+                else if(temp.getLeft() == null)
+                {
+                    temp = temp.getRight();
+                }
+                else if(temp.getRight() == null)
+                {
+                    temp = temp.getLeft();
+                }
+                else
+                {
+                    MyBSTNode<K,V> successor = temp.successor();
+                    K newKey = successor.getKey();
+                    temp.setValue(successor.getValue());
+                    remove(newKey);
+                    temp.setKey(newKey);
+                }
+                return removed;
+            }
+            else if(key.compareTo(temp.getKey()) < 0)
+            {
+                temp = temp.left;
+            }
+            else if(key.compareTo(root.getKey()) > 0)
+            {
+                temp = temp.right;
+            }
+        }
         return null;
     }
 
@@ -143,8 +223,14 @@ public class MyBST<K extends Comparable<K>, V> {
         }
 
         public MyBSTNode<K, V> successor() {
-            // TODO
-            return null;
+            MyBSTNode<K, V> ret = null;
+            if(right != null)
+                ret = right;
+            while(ret.getLeft() != null)
+            {
+                ret = left;
+            }
+            return ret;
         }
 
         /**
